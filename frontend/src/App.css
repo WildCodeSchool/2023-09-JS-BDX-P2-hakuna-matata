@@ -35,4 +35,89 @@ h3.text_Home {
   padding: 10px;
   width: 25vw;
   margin: 12px;
+  position: relative;
+}
+.ambitieux::after {
+  content: "🏆";
+  position: absolute;
+  top: -10px;
+  right: -7px;
+  font-size: 20px;
+}
+.amoureux::after {
+  content: "😍";
+  position: absolute;
+  top: -10px;
+  right: -7px;
+  font-size: 20px;
+}
+.anxieux::after {
+  content: "🥺";
+  position: absolute;
+  top: -10px;
+  right: -7px;
+  font-size: 20px;
+}
+.aventurier::after {
+  content: "🧳";
+  position: absolute;
+  top: -10px;
+  right: -7px;
+  font-size: 20px;
+}
+.curieux::after {
+  content: "🔍";
+  position: absolute;
+  top: -10px;
+  right: -7px;
+  font-size: 20px;
+}
+.drole::after {
+  content: "🤪";
+  position: absolute;
+  top: -10px;
+  right: -7px;
+  font-size: 20px;
+}
+.gourmand::after {
+  content: "😋";
+  position: absolute;
+  top: -10px;
+  right: -7px;
+  font-size: 20px;
+}
+.entreprenant::after {
+  content: "🤓";
+  position: absolute;
+  top: -10px;
+  right: -7px;
+  font-size: 20px;
+}
+.scientifique::after {
+  content: "🧪";
+  position: absolute;
+  top: -10px;
+  right: -7px;
+  font-size: 20px;
+}
+.sportif::after {
+  content: "🥇";
+  position: absolute;
+  top: -10px;
+  right: -7px;
+  font-size: 20px;
+}
+.relax::after {
+  content: "😌";
+  position: absolute;
+  top: -10px;
+  right: -7px;
+  font-size: 20px;
+}
+.triste::after {
+  content: "🥲";
+  position: absolute;
+  top: -10px;
+  right: -7px;
+  font-size: 20px;
 }
