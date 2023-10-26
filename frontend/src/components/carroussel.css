@@ -35,3 +35,6 @@ body {
   display: block;
   width: 100%;
 }
+.carroussel3.swiper {
+  background-color: whitesmoke;
+}

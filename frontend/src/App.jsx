@@ -1,9 +1,13 @@
 import Carroussel from "./components/Carroussel";
+import MoodChoice from "./components/MoodChoice";
 
 function App() {
   return (
     <>
-      .<Carroussel />
+      <MoodChoice />
+      <Carroussel />
+      <Carroussel />
+      <Carroussel className="carroussel3" />
     </>
   );
 }

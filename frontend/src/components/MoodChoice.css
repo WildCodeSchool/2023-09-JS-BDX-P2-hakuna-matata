@@ -1,0 +1,36 @@
+.moodchoices {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 26px;
+}
+
+h2 {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 20px;
+}
+
+button {
+  position: relative;
+  border: #8bd4d8 solid 2px;
+  border-radius: 15px;
+  padding: 10px 15px;
+}
+
+h3 {
+  background-color: #8bd4d8;
+  color: white;
+  padding: 20px;
+  margin: 0;
+}
+
+button::before {
+  content: "😊"; /* Insérez ici le code ou le caractère de votre smiley */
+  position: absolute;
+  top: -10px;
+  /* Ajustez la position verticale du smiley sur la bordure */
+  left: 100%; /* Placez le smiley au milieu de la bordure */
+  transform: translateX(-50%); /* Ajustez horizontalement pour le centrer */
+  font-size: 20px;
+}
