@@ -30,5 +30,9 @@
     "cross-env": "^7.0.3",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3"
+  },
+  "dependencies": {
+    "eslint": "^8.52.0",
+    "prettier": "^3.0.3"
   }
 }
