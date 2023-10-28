@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import SingleDishCard from "./components/SingleDishCard";
+import Table from "./components/Table";
 
 function App() {
   const [allDishes, setAllDisches] = useState([]);
@@ -22,8 +22,7 @@ function App() {
       <button type="button" onClick={fetcher}>
         fetch
       </button>
-      {allDishes.length > 0 &&
-        allDishes.map((myDish) => <SingleDishCard dish={myDish} />)}
+      <Table tableList={allDishes} />
     </div>
   );
 }
