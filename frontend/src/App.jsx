@@ -1,25 +1,14 @@
 import { useState } from "react";
 import "./App.css";
 import Table from "./components/Table";
+import { fetcher } from "./components/helpers";
 
 function App() {
   const [allDishes, setAllDisches] = useState([]);
-  async function fetcher() {
-    try {
-      const response = await fetch(
-        `https://www.themealdb.com/api/json/v1/1/filter.php?a=Canadian`
-      );
-      const dishes = await response.json();
-      // console.log("all dishes ", dishes.meals);
-      setAllDisches([...dishes.meals]);
-    } catch (err) {
-      // console.log(err);
-    }
-  }
   return (
     <div className="App">
       <h1>first h1</h1>
-      <button type="button" onClick={fetcher}>
+      <button type="button" onClick={() => fetcher(setAllDisches)}>
         fetch
       </button>
       <Table tableList={allDishes} />
