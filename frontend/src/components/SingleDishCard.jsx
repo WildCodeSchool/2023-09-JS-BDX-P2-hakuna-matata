@@ -8,7 +8,8 @@ export default function SingleDishCard({ dish }) {
     <div
       className="card"
       style={{
-        background: `url(https://picsum.photos/200)`,
+        background: `url(${dish.strMealThumb}) no-repeat`,
+        backgroundSize: "contain",
         width: `200px`,
         height: `200px`,
       }}
