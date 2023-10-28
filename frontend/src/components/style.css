@@ -1,0 +1,31 @@
+.card {
+  width: 200px;
+  height: 200px;
+  border-radius: 25px;
+  box-shadow: 2px 2px 8px rgb(132, 132, 132);
+  transition: 0.3s ease-in-out;
+  margin: 5px;
+}
+.card:hover {
+  scale: 1.02;
+}
+.card-top {
+  height: 200px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: end;
+  opacity: 0;
+  transition: all 0.2 ease;
+}
+.card-top h3 {
+  color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 0 0 30px 40px;
+}
+.card-top:hover {
+  opacity: 1;
+}
+.card-top h3:hover {
+  scale: initial;
+}
