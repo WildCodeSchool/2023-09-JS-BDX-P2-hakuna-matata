@@ -34,4 +34,19 @@ async function fetcherByCategory(setStateCallBack, category = "Beef") {
     return [];
   }
 }
-export { fetcher, fetcherByCategory };
+async function fetcherById(setStateCallBack, id) {
+  try {
+    const response = await fetch(
+      `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
+    );
+    const dishes = await response.json();
+    setStateCallBack(() => dishes.meals);
+    // console.log(dishes.meals);
+    return dishes;
+  } catch (err) {
+    // console.log(err);
+    setStateCallBack(() => []);
+    return [];
+  }
+}
+export { fetcher, fetcherByCategory, fetcherById };

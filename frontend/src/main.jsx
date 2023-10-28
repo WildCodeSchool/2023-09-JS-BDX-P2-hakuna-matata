@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
 import SearchDishes from "./components/SearchDishes";
+import SingleDish from "./components/SingleDish";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: "/search",
     element: <SearchDishes />,
+  },
+  {
+    path: "/dishes/:id",
+    element: <SingleDish />,
   },
 ]);
 

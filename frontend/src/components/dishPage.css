@@ -1,0 +1,16 @@
+.big-card {
+  margin: 0 auto;
+  width: clamp(710px, 70%, 900px);
+}
+.image-recette {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.dish-ingredients {
+  width: 25%;
+}
+.image-recette div {
+  border-radius: 40px 40px;
+}

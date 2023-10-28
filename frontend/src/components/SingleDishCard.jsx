@@ -5,7 +5,7 @@ import "./style.css";
 export default function SingleDishCard({ dish }) {
   const [showText, setShowText] = useState(false);
   return (
-    <div
+    <a
       className="card"
       style={{
         background: `url(${dish.strMealThumb}) no-repeat`,
@@ -15,6 +15,7 @@ export default function SingleDishCard({ dish }) {
       }}
       onMouseEnter={() => setShowText(true)}
       onMouseLeave={() => setShowText(false)}
+      href={`/dishes/${dish.idMeal}`}
     >
       <div
         className="card-top"
@@ -22,11 +23,12 @@ export default function SingleDishCard({ dish }) {
       >
         <h3>{dish.strMeal}</h3>
       </div>
-    </div>
+    </a>
   );
 }
 SingleDishCard.propTypes = {
   dish: PropTypes.shape({
+    idMeal: PropTypes.string.isRequired,
     strMeal: PropTypes.string.isRequired,
     strMealThumb: PropTypes.string.isRequired,
   }).isRequired,
