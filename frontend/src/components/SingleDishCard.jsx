@@ -19,7 +19,7 @@ export default function SingleDishCard({ dish }) {
         className="card-top"
         style={{ display: `${!showText ? "none" : ""}` }}
       >
-        <h3>{dish.strMeal}</h3>
+        <h3>{dish.strMeal} lol</h3>
       </div>
     </div>
   );
