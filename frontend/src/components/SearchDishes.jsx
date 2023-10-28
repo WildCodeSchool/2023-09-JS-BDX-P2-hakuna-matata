@@ -3,6 +3,53 @@ import "../App.css";
 import Table from "./Table";
 import { fetcher, fetcherByCategory } from "./helpers";
 
+const areas = [
+  "American",
+  "British",
+  "Canadian",
+  "Chinese",
+  "Croatian",
+  "Dutch",
+  "Egyptian",
+  "Filipino",
+  "French",
+  "Greek",
+  "Indian",
+  "Irish",
+  "Italian",
+  "Jamaican",
+  "Japanese",
+  "Kenyan",
+  "Malaysian",
+  "Mexican",
+  "Moroccan",
+  "Polish",
+  "Portuguese",
+  "Russian",
+  "Spanish",
+  "Thai",
+  "Tunisian",
+  "Turkish",
+  "Vietnamese",
+  "Unknown",
+];
+const categories = [
+  "Beef",
+  "Breakfast",
+  "Chicken",
+  "Dessert",
+  "Goat",
+  "Lamb",
+  "Miscellaneous",
+  "Pasta",
+  "Pork",
+  "Seafood",
+  "Side",
+  "Starter",
+  "Vegan",
+  "Vegetarian",
+];
+
 function SearchDishes() {
   const [allDishes, setAllDisches] = useState([]);
   return (
@@ -16,7 +63,19 @@ function SearchDishes() {
             fetcherByCategory(setAllDisches, e.target.value);
           }
         }}
+        // onInput={}
       />
+      <select
+        name=""
+        id=""
+        onChange={(e) => {
+          fetcherByCategory(setAllDisches, e.target.value);
+        }}
+      >
+        {categories.map((category) => (
+          <option value={category}>{category}</option>
+        ))}
+      </select>
       <select
         name=""
         id=""
@@ -24,9 +83,9 @@ function SearchDishes() {
           fetcher(setAllDisches, e.target.value);
         }}
       >
-        <option value="All">All</option>
-        <option value="Canadian">Canadian</option>
-        <option value="American">American</option>
+        {areas.map((area) => (
+          <option value={area}>{area}</option>
+        ))}
       </select>
       <button type="button" onClick={() => fetcher(setAllDisches)}>
         fetch
