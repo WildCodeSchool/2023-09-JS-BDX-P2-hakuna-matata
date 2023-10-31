@@ -1,10 +1,14 @@
 import "./App.css";
-import Home from "./pages/Home";
+import Map from "./pages/Map";
+import Nav from "./pages/Nav";
+import Footer from "./pages/Footer";
 
 function App() {
   return (
     <div className="App">
-      <Home />
+      <Nav />
+      <Map />
+      <Footer />
     </div>
   );
 }
