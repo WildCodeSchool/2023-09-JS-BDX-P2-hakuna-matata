@@ -1,6 +1,6 @@
 import React from "react";
 
-function Map() {
+function Home() {
   return (
     <div className="container">
       <div className="banniere">
@@ -31,4 +31,4 @@ function Map() {
   );
 }
 
-export default Map;
+export default Home;

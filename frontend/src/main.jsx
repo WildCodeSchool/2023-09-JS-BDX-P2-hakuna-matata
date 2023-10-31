@@ -4,7 +4,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
-import Map from "./pages/Map";
+import Home from "./pages/Home";
 import Continent from "./pages/Continent";
 import Country from "./pages/Country";
 import Meal from "./pages/Meal";
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Map />,
+        element: <Home />,
       },
       {
         path: "/continent/:continent",
