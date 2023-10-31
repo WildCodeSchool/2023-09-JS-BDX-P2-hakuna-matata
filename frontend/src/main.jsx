@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import SearchDishes from "./components/SearchDishes";
 import SingleDish from "./components/SingleDish";
-import SearchByIngredients from "./components/SearchByIngredients";
+import SearchContinent from "./components/SearchContinent";
 
 const router = createBrowserRouter([
   {
@@ -22,8 +22,8 @@ const router = createBrowserRouter([
     element: <SingleDish />,
   },
   {
-    path: "/ingredients",
-    element: <SearchByIngredients />,
+    path: "/continent",
+    element: <SearchContinent />,
   },
 ]);
 

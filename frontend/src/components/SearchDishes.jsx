@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../App.css";
 import Table from "./Table";
-import { fetcher, fetcherByCategory } from "./helpers";
+import { fetcherByArea, fetcherByCategory } from "./helpers";
 
 const areas = [
   "American",
@@ -80,14 +80,14 @@ function SearchDishes() {
         name=""
         id=""
         onChange={(e) => {
-          fetcher(setAllDisches, e.target.value);
+          fetcherByArea(setAllDisches, e.target.value);
         }}
       >
         {areas.map((area) => (
           <option value={area}>{area}</option>
         ))}
       </select>
-      <button type="button" onClick={() => fetcher(setAllDisches)}>
+      <button type="button" onClick={() => fetcherByArea(setAllDisches)}>
         fetch
       </button>
       {allDishes.length > 0 && <Table tableList={allDishes} />}
