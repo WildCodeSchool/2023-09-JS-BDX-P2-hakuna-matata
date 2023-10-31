@@ -5,8 +5,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
 import Map from "./pages/Map";
-import Nav from "./pages/Nav";
-import Footer from "./pages/Footer";
+import Continent from "./pages/Continent";
+import Country from "./pages/Country";
+import Meal from "./pages/Meal";
 
 const router = createBrowserRouter([
   {
@@ -17,12 +18,16 @@ const router = createBrowserRouter([
         element: <Map />,
       },
       {
-        path: "/about",
-        element: <Nav />,
+        path: "/continent/:continent",
+        element: <Continent />,
       },
       {
-        path: "/footer",
-        element: <Footer />,
+        path: "/country/:id",
+        element: <Country />,
+      },
+      {
+        path: "/meals/:id",
+        element: <Meal />,
       },
     ],
   },

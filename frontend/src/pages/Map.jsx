@@ -18,8 +18,7 @@ function Map() {
           alt="Map monde"
         />
         <button className="mapButton" type="button">
-          {" "}
-          Test
+          <a href="/continent/africa">Africa</a>
         </button>
       </div>
       <h4>Weekly dishes</h4>
