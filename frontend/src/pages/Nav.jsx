@@ -3,11 +3,7 @@ import React from "react";
 function Nav() {
   return (
     <div className="container navigation">
-      <img
-        className="logo"
-        src="./src/assets/logoFoodT.svg"
-        alt="logo Food Treck"
-      />
+      <img className="logo" src="./src/assets/logo.svg" alt="logo Food Treck" />
 
       <input
         className="searchBar"
