@@ -13,3 +13,25 @@
   fill: rgb(229, 71, 71);
   filter: drop-shadow(0 0 0.75rem rgb(129, 104, 109));
 }
+.map-svg {
+  width: 800px;
+  height: 464px;
+}
+@media screen and (max-width: 700px) {
+  .map-svg {
+    width: 600px;
+    height: 348px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .map-svg {
+    width: 570px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 576px) {
+  .map-svg {
+    width: 500px;
+    height: auto;
+  }
+}
