@@ -1,4 +1,5 @@
 import React from "react";
+import Map from "../components/Map";
 
 function Home() {
   return (
@@ -11,16 +12,7 @@ function Home() {
         />
       </div>
       <h4>Food treck the world</h4>
-      <div className="map">
-        <img
-          className="monde"
-          src="./src/assets/mondeMap.svg"
-          alt="Map monde"
-        />
-        <button className="mapButton" type="button">
-          <a href="/continent/africa">Africa</a>
-        </button>
-      </div>
+      <Map />
       <h4>Weekly dishes</h4>
       <img
         className="plats"

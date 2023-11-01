@@ -1,0 +1,15 @@
+.continent {
+  transition: all 0.1s ease;
+  stroke: black;
+}
+.continent:hover {
+  transform: scale(1.01);
+  stroke: rgb(94, 93, 93);
+}
+.africa {
+  fill: rgb(239, 106, 106);
+}
+.africa:hover {
+  fill: rgb(229, 71, 71);
+  filter: drop-shadow(0 0 0.75rem rgb(129, 104, 109));
+}
