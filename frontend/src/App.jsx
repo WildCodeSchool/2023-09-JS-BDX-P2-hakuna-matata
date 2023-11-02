@@ -2,10 +2,12 @@ import React from "react";
 import "./App.css";
 import NavBar from "./components/NavBar";
 
-export default function App() {
+function App() {
   return (
     <div>
       <NavBar />
     </div>
   );
 }
+
+export default App;
