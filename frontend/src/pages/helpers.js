@@ -1,13 +1,13 @@
 const continents = {
   America: ["American", "Canadian", "Mexican", "Jamaican"],
-  WestEurop: [
-    "British",
-    "Dutch",
-    "French",
-    "Italian",
-    "Irish",
-    "Portuguese",
-    "Spanish",
+  WestEurope: [
+    "England",
+    "Netherland",
+    "France",
+    "Italy",
+    "Ireland",
+    "Portugal",
+    "Spain",
   ],
   EastEurop: ["Croatian", "Greek", "Polish", "Russian"],
   MiddleEast: ["Egyptian", "Turkish"],
@@ -148,6 +148,7 @@ async function fetchByContinent(setStateCallBack, continent) {
       url.search = new URLSearchParams(params).toString();
       return url;
     });
+
     await Promise.all(
       links.map(async (lien) => {
         const tmp = await fetch(lien);
@@ -161,6 +162,7 @@ async function fetchByContinent(setStateCallBack, continent) {
     setStateCallBack([]);
   }
 }
+
 export {
   fetchByArea,
   fetchByCategory,

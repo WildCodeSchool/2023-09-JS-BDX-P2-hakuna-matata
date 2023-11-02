@@ -3,20 +3,39 @@ import { continents } from "./helpers";
 
 function Continent() {
   const flags = {
-    British: "/src/assets/united-kingdom.svg",
+    England: "/src/assets/flags/united-kingdom2.svg",
+    Netherland: "/src/assets/flags/netherland.svg",
+    France: "/src/assets/flags/france.svg",
+    Italy: "/src/assets/flags/italy.svg",
+    Ireland: "/src/assets/flags/ireland.svg",
+    Portugal: "/src/assets/flags/portugal.svg",
+    Spain: "/src/assets/flags/spain.svg",
+  };
+
+  const countryTexts = {
+    England: "Enjoy your meal !",
+    Netherland: "Eet smakelijk",
+    France: "Bonne appétit",
+    Italy: "Buon appetito!",
+    Ireland: "Enjoy your meal mate",
+    Portugal: "Bom apetite !",
+    Spain: "Buen provecho!",
   };
 
   const { continent } = useParams();
   const countries = continents[continent] || [];
 
   return (
-    <div>
-      <h3>Pays du continent {continent}</h3>
-      <ul>
+    <div className="flag-container">
+      <h3 className="flag-title">Welcome to {continent}</h3>
+      <ul className="flag-list">
         {countries.map((country) => (
-          <li key={country}>
-            <img src={flags[country]} alt={country} />
-            {country}
+          <li className="flag-li" key={country}>
+            <span className="enjoy-meal">
+              {country}
+              <p className="country-text">{countryTexts[country]}</p>
+            </span>
+            <img className="flag-image" src={flags[country]} alt={country} />
           </li>
         ))}
       </ul>
