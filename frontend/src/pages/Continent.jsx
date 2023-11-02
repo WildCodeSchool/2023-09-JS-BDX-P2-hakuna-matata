@@ -15,7 +15,7 @@ function Continent() {
   const countryTexts = {
     England: "Enjoy your meal !",
     Netherland: "Eet smakelijk",
-    France: "Bonne appétit",
+    France: "Bon appétit",
     Italy: "Buon appetito!",
     Ireland: "Enjoy your meal mate",
     Portugal: "Bom apetite !",
