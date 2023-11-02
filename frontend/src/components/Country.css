@@ -1,0 +1,17 @@
+.country-flag {
+  max-width: 150px;
+  min-width: 150px;
+  height: 100px;
+  margin: 5px;
+  scroll-snap-align: center;
+  border-radius: 10px;
+}
+@media screen and (max-width: 700px) {
+  .country-flag {
+    max-width: 100px;
+    min-width: 100px;
+    height: 70px;
+    margin: 5px;
+    scroll-snap-align: center;
+  }
+}

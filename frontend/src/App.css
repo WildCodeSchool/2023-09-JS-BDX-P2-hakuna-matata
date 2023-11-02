@@ -39,13 +39,41 @@ h4 {
   flex-direction: column;
   align-items: center;
 }
+.search {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .search {
+    width: 100%;
+    flex-direction: column;
+  }
+  .options-search {
+    width: 60%;
+  }
+}
+.options-search {
+  display: inline-block;
+  padding: 8px 10px;
+  margin: 0 5px 10px 0;
+  box-shadow: 1px 1px 2px #ffffff;
+  border-radius: 5px 0 0 5px;
+}
+.options-search input,
+.options-search label {
+  display: inline-block;
+  margin-left: 10px;
+}
 .searchBar {
-  width: 80%;
-  border-radius: 5px;
+  display: block;
+  width: 60%;
+  border-radius: 0 5px 5px 0;
   border: none;
   padding: 10px 30px 10px 10px;
   margin-bottom: 10px;
-
   position: relative;
 }
 .searchBar:after {
