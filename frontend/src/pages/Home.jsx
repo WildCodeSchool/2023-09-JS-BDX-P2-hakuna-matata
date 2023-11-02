@@ -18,16 +18,16 @@ function Home() {
           alt="Map monde"
         />
         <button className="africa mapButton" type="button">
-          <a href="/continent/africa">Africa</a>
+          <a href="/continent/Africa">Africa</a>
         </button>
         <button className="america mapButton" type="button">
-          <a href="/continent/africa">America</a>
+          <a href="/continent/America">America</a>
         </button>
         <button className="europe mapButton" type="button">
-          <a href="/continent/africa">Europe</a>
+          <a href="/continent/WestEurope">WestEurope</a>
         </button>
         <button className="asia mapButton" type="button">
-          <a href="/continent/africa">Mid East & Asia</a>
+          <a href="/continent/Asia">Mid East & Asia</a>
         </button>
       </div>
       <h4>Weekly dishes</h4>
