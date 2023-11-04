@@ -1,5 +1,4 @@
 import "./Nav.css";
-import SearchBar from "../components/SearchBar";
 
 function Nav() {
   return (
@@ -390,7 +389,6 @@ function Nav() {
           </g>
         </g>
       </svg>
-      <SearchBar />
     </div>
   );
 }
