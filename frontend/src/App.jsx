@@ -7,13 +7,14 @@ import SearchBar from "./components/SearchBar";
 
 function App() {
   const [country, setCountry] = useState(null);
+  const [countryDishes, setCountryDishes] = useState(null);
 
   return (
     <div className="App">
       <Nav />
-      <SearchBar callback={setCountry} />
+      <SearchBar callback={setCountry} callbackdishes={setCountryDishes} />
       <main>
-        <Outlet context={{ country }} />
+        <Outlet context={{ country, countryDishes }} />
       </main>
       <Footer />
     </div>

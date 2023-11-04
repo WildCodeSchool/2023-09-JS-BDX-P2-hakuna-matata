@@ -2,7 +2,8 @@
   width: 200px;
   height: 200px;
   border-radius: 10px;
-  display: flex;
+  display: inline-flex;
+  margin: 10px;
   justify-content: center;
   align-items: flex-end;
   transition: all 0.3s ease-in-out;

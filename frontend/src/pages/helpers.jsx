@@ -74,7 +74,7 @@ const countriesDetailed = [
     CountryApi: "american",
     Description:
       "The United States boasts a wide-ranging culinary landscape. From Southern comfort food like fried chicken and biscuits to Tex-Mex tacos, and the iconic New York-style pizza, American cuisine is diverse and flavorful. Barbecue, with its regional variations, is a BBQ lover's dream.",
-    ImageURL: "./src/assets/flags/usa.jpg",
+    ImageURL: `../assets/flags/usa.jpg`,
   },
   {
     Id: 2,
