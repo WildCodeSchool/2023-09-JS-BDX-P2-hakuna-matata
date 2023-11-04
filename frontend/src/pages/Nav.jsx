@@ -1,22 +1,7 @@
-import React, { useState } from "react";
 import "./Nav.css";
-import { countriesDetailed } from "./helpers";
-import Country from "../components/Country";
+import SearchBar from "../components/SearchBar";
 
 function Nav() {
-  const [searchTypeValue, setSearchType] = useState("country");
-  const [results, setResults] = useState([]);
-  function handleSearch(e) {
-    if (searchTypeValue === "country" && e.target.value) {
-      const filtered = countriesDetailed.filter((area) =>
-        area.Country.toString()
-          .toLowerCase()
-          .includes(e.target.value.toString().toLowerCase())
-      );
-      setResults([...filtered]);
-      // console.log(results.length);
-    }
-  }
   return (
     <div className="container navigation">
       <svg
@@ -27,7 +12,7 @@ function Nav() {
         height="80"
         preserveAspectRatio="xMidYMid meet"
         version="1.0"
-        className="logo"
+        className="hat logo"
       >
         <defs
           style={{
@@ -252,7 +237,7 @@ function Nav() {
             <g clipPath="url(#488125921d)">
               <path
                 className="hat"
-                fill="red"
+                fill="white"
                 d="M 115.277344 123.289062 C 99.867188 129.660156 84.023438 139.855469 70.660156 151.996094 C 64.011719 158.039062 58.140625 164.398438 53.207031 170.910156 L 50.6875 174.230469 L 40.203125 150.746094 C 35.5625 153.859375 25.375 159.273438 14.511719 155.867188 C 9.246094 154.214844 5.742188 151.546875 3.796875 147.714844 C 1.246094 142.683594 -2.171875 128.109375 11.664062 116.585938 C 21.777344 107.398438 37.808594 105.265625 41.144531 104.914062 C 42.234375 104.230469 43.226562 103.480469 44.15625 102.636719 C 47.898438 99.234375 50.128906 94.664062 52.710938 89.375 C 56.398438 81.816406 60.984375 72.414062 71.882812 62.515625 C 73.222656 61.296875 74.648438 60.078125 76.121094 58.898438 C 89.007812 48.570312 99.308594 44.839844 107.609375 47.496094 C 111.289062 48.675781 120.839844 55.15625 124.246094 67.441406 C 126.203125 73.941406 124.125 80.839844 120.429688 87.757812 C 118.6875 91.019531 115.324219 96.078125 109.203125 101.640625 C 107.527344 103.160156 106.019531 104.382812 104.875 105.257812 L 118.292969 122.042969 Z M 115.277344 123.289062 "
                 fillOpacity="1"
                 fillRule="nonzero"
@@ -264,6 +249,7 @@ function Nav() {
           <g clipPath="url(#14e7e9c83a)">
             <g clipPath="url(#78d04070b1)">
               <path
+                className="hat"
                 fill="red"
                 d="M 120.679688 68.222656 C 122.804688 75.285156 120.925781 81.976562 117.636719 87.65625 C 111.746094 97.832031 101.328125 104.761719 101.328125 104.761719 L 114.304688 120.996094 C 108.34375 123.460938 102.332031 126.480469 96.421875 129.953125 C 79.199219 140.074219 62.859375 154.046875 51.226562 169.394531 L 41.195312 146.917969 C 41.195312 146.917969 28.554688 157.683594 15.222656 153.503906 C 6.75 150.84375 1.789062 141.960938 6.082031 128.320312 C 12.402344 110.230469 41.972656 107.328125 41.972656 107.328125 C 56.703125 98.59375 52.78125 80.804688 77.6875 60.84375 C 102.511719 40.945312 114.746094 48.5 120.679688 68.222656 Z M 120.679688 68.222656 "
                 fillOpacity="1"
@@ -404,39 +390,7 @@ function Nav() {
           </g>
         </g>
       </svg>
-      <div className="search">
-        <div className="options-search">
-          <input
-            type="radio"
-            id="country"
-            name="search"
-            value="country"
-            checked
-            onChange={() => setSearchType("country")}
-          />
-          <label htmlFor="country">Country</label>
-          <input
-            type="radio"
-            id="meal"
-            name="search"
-            value="meal"
-            onInput={() => setSearchType("meal")}
-          />
-          <label htmlFor="meal">Meal</label>
-        </div>
-
-        <input
-          className="searchBar"
-          type="text"
-          placeholder="Search For a country or a meal"
-          autoComplete="off"
-          onChange={handleSearch}
-        />
-      </div>
-      <div className="countries-searched">
-        {results.length > 0 &&
-          results.map((ele) => <Country key={ele.Id} country={ele} />)}
-      </div>
+      <SearchBar />
     </div>
   );
 }
