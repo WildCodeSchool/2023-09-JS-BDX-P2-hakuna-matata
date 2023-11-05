@@ -18,10 +18,12 @@ function Continent() {
   }, []);
 
   return (
-    <div>
+    <div className="table">
       <h3>continent loaded is {continent}</h3>
       {!isLoading &&
-        dishesOfContinent.map((element) => <CardDish dish={element} />)}
+        dishesOfContinent.map((element) => (
+          <CardDish dish={element} key={element.idMeal} />
+        ))}
     </div>
   );
 }

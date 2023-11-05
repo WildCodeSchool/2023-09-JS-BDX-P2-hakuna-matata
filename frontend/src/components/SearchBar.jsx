@@ -1,36 +1,30 @@
 import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
-import Form from "react-bootstrap/Form";
 import "./SearchBar.css";
-import { countriesDetailed, fetchByArea } from "../pages/helpers";
+import { countriesDetailed, fetchByArea, countries } from "../pages/helpers";
 
 export default function SearchBar({ callback, callbackdishes }) {
   const navigate = useNavigate();
+  async function handleSelection(e) {
+    const country = countries.find((ele) => ele.Id === +e.target.value);
+    await fetchByArea(callbackdishes, country.CountryApi);
+    callback(country);
+    e.target.value = "all";
+    navigate(`/country/${country.CountryApi}`);
+  }
   return (
-    <Form.Select
-      aria-label="Default select example"
-      className="form-select"
-      size="sm"
-      onChange={async (e) => {
-        const country = countriesDetailed.find(
-          (ele) => ele.CountryApi === e.target.value
-        );
-        if (country) {
-          await fetchByArea(callbackdishes, country.CountryApi);
-          callback(country);
-        } else {
-          callback({ Country: "all", CountryApi: "all" });
-        }
-        navigate(`/country/${e.target.value}`);
-      }}
-    >
+    <select className="form-select" onChange={async (e) => handleSelection(e)}>
       <option value="all">Where do you want to eat?</option>
-      {countriesDetailed.map((area) => (
-        <option key={area.Id} value={area.CountryApi}>
-          {area.Country}
-        </option>
+      {countriesDetailed.map((cont) => (
+        <optgroup label={cont.Continent} key={cont.Continent}>
+          {cont.Countries.map((country) => (
+            <option value={country.Id} key={country.Id}>
+              {country.Country}
+            </option>
+          ))}
+        </optgroup>
       ))}
-    </Form.Select>
+    </select>
   );
 }
 SearchBar.propTypes = {

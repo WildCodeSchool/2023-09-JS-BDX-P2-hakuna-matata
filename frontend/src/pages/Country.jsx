@@ -12,13 +12,13 @@ export default function Country() {
         <p className="description">{country.Description ?? ""}</p>
         <div
           style={{
-            background: `url(${
+            backgroundImage: `url(${
               country
                 ? country.ImageURL
                 : "https://placehold.co/600x400/EEE/31343C"
-            })
-             no-repeat`,
+            })`,
             backgroundSize: `contain`,
+            backgroundRepeat: "no-repeat",
             width: `400px`,
             height: `300px`,
           }}
@@ -27,7 +27,7 @@ export default function Country() {
       <div className="table">
         {country.Country &&
           countryDishes.length > 0 &&
-          countryDishes.map((ele) => <CardDish dish={ele} />)}
+          countryDishes.map((ele) => <CardDish dish={ele} key={ele.idMeal} />)}
       </div>
     </div>
   );
