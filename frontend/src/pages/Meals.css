@@ -1,0 +1,45 @@
+.big-card {
+  margin: 0 auto;
+  width: clamp(710px, 70%, 900px);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+h1 {
+  font-size: 31px;
+  color: black;
+}
+.image-recette {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+h3 {
+  margin: 15px;
+}
+
+.dish-ingredients {
+  color: rgb(152, 146, 146);
+  width: 25%;
+}
+.image-recette div {
+  border-radius: 40px;
+}
+
+.speciality {
+  padding-bottom: 10px;
+  font-size: 22px;
+  color: red;
+}
+
+.category {
+  padding-bottom: 10px;
+  font-size: 18px;
+}
+.instructions {
+  background-color: #d34848;
+  color: wheat;
+  padding: 44px;
+  border-radius: 40px;
+}

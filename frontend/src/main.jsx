@@ -7,7 +7,7 @@ import App from "./App";
 import Home from "./pages/Home";
 import Continent from "./pages/Continent";
 import Country from "./pages/Country";
-import Meal from "./pages/Meal";
+import Meals from "./pages/Meals";
 
 const router = createBrowserRouter([
   {
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/meals/:id",
-        element: <Meal />,
+        element: <Meals />,
       },
     ],
   },
