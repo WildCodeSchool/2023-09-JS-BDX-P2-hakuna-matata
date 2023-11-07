@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.burger-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 3em;
+}
+
+.menu-style {
+  display: flex;
+  flex-direction: column;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.menu a {
+  color: white;
+  font-size: 13px;
+}
