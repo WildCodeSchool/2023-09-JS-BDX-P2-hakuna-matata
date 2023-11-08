@@ -7,6 +7,7 @@ import App from "./App";
 import Home from "./pages/Home";
 import Continent from "./pages/Continent";
 import Country from "./pages/Country";
+import { countries, countriesDetailed } from "./pages/helpers";
 
 const router = createBrowserRouter([
   {
@@ -19,10 +20,18 @@ const router = createBrowserRouter([
       {
         path: "/continent/:continent",
         element: <Continent />,
+        loader: ({ params }) => {
+          return countriesDetailed.find(
+            (ele) => ele.Continent.toLowerCase() === params.continent
+          ).Countries;
+        },
       },
       {
-        path: "/country/:id",
+        path: "/country/:CountryApi",
         element: <Country />,
+        loader: ({ params }) => {
+          return countries.find((ele) => ele.CountryApi === params.CountryApi);
+        },
       },
     ],
   },
