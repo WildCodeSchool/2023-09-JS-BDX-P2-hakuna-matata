@@ -1,13 +1,8 @@
-import { useParams } from "react-router-dom";
-import { countriesDetailed } from "./helpers";
+import { useLoaderData } from "react-router-dom";
 import CountryCard from "../components/CountryCard";
 
 function Continent() {
-  const { continent } = useParams();
-
-  const listCountries = countriesDetailed.find(
-    (ele) => ele.Continent.toLowerCase() === continent
-  ).Countries;
+  const listCountries = useLoaderData();
 
   return (
     <div className="countries-container">

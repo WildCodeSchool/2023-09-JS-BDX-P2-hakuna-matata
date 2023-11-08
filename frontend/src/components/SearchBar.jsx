@@ -1,8 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import "./SearchBar.css";
-// import { countriesDetailed, fetchByArea, countries } from "../pages/helpers";
-import { countries, countriesDetailed, fetchByArea } from "../pages/helpers";
+import { countriesDetailed, fetchByArea, countries } from "../pages/helpers";
 
 export default function SearchBar({ callback, callbackdishes }) {
   const navigate = useNavigate();
