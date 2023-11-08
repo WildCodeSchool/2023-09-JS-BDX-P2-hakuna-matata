@@ -1,15 +1,11 @@
 import { useNavigate } from "react-router-dom";
-import PropTypes from "prop-types";
 import "./SearchBar.css";
-import { countriesDetailed, fetchByArea, countries } from "../pages/helpers";
+import { countriesDetailed, countries } from "../pages/helpers";
 
-export default function SearchBar({ callback, callbackdishes }) {
+export default function SearchBar() {
   const navigate = useNavigate();
-  async function handleSelection(e) {
+  function handleSelection(e) {
     const country = countries.find((ele) => ele.Id === +e.target.value);
-    await fetchByArea(callbackdishes, country.CountryApi);
-    callback(country);
-    e.target.value = "all";
     navigate(`/country/${country.CountryApi}`);
   }
   return (
@@ -27,7 +23,3 @@ export default function SearchBar({ callback, callbackdishes }) {
     </select>
   );
 }
-SearchBar.propTypes = {
-  callback: PropTypes.func.isRequired,
-  callbackdishes: PropTypes.func.isRequired,
-};
