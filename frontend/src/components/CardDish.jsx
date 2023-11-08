@@ -1,13 +1,17 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import "./CardDish.css";
+import { useNavigate } from "react-router-dom";
 
 export default function CardDish({ dish }) {
   const [isBeenHovered, setIsBeenHovered] = useState(false);
+  const navigate = useNavigate();
   return (
     <button
       type="button"
-      onClick={() => {}}
+      onClick={() => {
+        navigate(`/meals/${dish.idMeal}`);
+      }}
       className="card-dish"
       style={{
         backgroundImage: `url(${dish.strMealThumb})`,
@@ -30,5 +34,6 @@ CardDish.propTypes = {
   dish: PropTypes.shape({
     strMeal: PropTypes.string.isRequired,
     strMealThumb: PropTypes.string.isRequired,
+    idMeal: PropTypes.string.isRequired,
   }).isRequired,
 };
