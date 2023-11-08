@@ -8,7 +8,12 @@ import Home from "./pages/Home";
 import Continent from "./pages/Continent";
 import Country from "./pages/Country";
 import Meals from "./pages/Meals";
-import { countries, countriesDetailed, fetchByArea } from "./pages/helpers";
+import {
+  countries,
+  countriesDetailed,
+  fetchByArea,
+  fetchById,
+} from "./pages/helpers";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +47,7 @@ const router = createBrowserRouter([
       {
         path: "/meals/:id",
         element: <Meals />,
+        loader: async ({ params }) => fetchById(params.id),
       },
     ],
   },
