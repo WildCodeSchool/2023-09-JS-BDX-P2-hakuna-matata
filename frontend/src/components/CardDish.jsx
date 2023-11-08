@@ -8,7 +8,8 @@ export default function CardDish({ dish }) {
     <div
       className="card-dish"
       style={{
-        background: `url(${dish.strMealThumb}) no-repeat`,
+        backgroundImage: `url(${dish.strMealThumb})`,
+        backgroundRepeat: "no-repeat",
         backgroundSize: `contain`,
       }}
       onMouseEnter={() => setIsBeenHovered(true)}
