@@ -7,6 +7,7 @@ import App from "./App";
 import Home from "./pages/Home";
 import Continent from "./pages/Continent";
 import Country from "./pages/Country";
+import Meals from "./pages/Meals";
 import { countries, countriesDetailed, fetchByArea } from "./pages/helpers";
 
 const router = createBrowserRouter([
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
             countryDishes: await fetchByArea(params.CountryApi),
           };
         },
+      },
+      {
+        path: "/meals/:id",
+        element: <Meals />,
       },
     ],
   },

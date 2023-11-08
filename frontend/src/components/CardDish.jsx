@@ -5,7 +5,9 @@ import "./CardDish.css";
 export default function CardDish({ dish }) {
   const [isBeenHovered, setIsBeenHovered] = useState(false);
   return (
-    <div
+    <button
+      type="button"
+      onClick={() => {}}
       className="card-dish"
       style={{
         backgroundImage: `url(${dish.strMealThumb})`,
@@ -21,7 +23,7 @@ export default function CardDish({ dish }) {
       >
         <h3>{dish.strMeal}</h3>
       </div>
-    </div>
+    </button>
   );
 }
 CardDish.propTypes = {
