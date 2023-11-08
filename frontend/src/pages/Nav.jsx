@@ -1,9 +1,16 @@
+import { Link } from "react-router-dom";
 import Hamburger from "../components/Hamburger";
 
 function Nav() {
   return (
     <div className="container navigation">
-      <img className="logo" src="/assets/logo.svg" alt="logo Food Truck" />
+      <Link to="/">
+        <img
+          className="logo"
+          src="./src/assets/logo.svg"
+          alt="logo Food Treck"
+        />
+      </Link>
 
       <Hamburger />
 
