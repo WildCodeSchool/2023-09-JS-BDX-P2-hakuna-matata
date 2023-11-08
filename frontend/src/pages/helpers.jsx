@@ -350,7 +350,9 @@ async function fetchById(id) {
     const response = await fetch(
       `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
     );
-    return await response.json();
+    const collection = await response.json();
+    // TODO: erreur si tableau vide
+    return collection.meals[0];
   } catch (err) {
     return [];
   }
