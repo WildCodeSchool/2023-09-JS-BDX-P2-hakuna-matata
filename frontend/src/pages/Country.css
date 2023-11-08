@@ -1,0 +1,38 @@
+.country-flag {
+  max-width: 150px;
+  min-width: 150px;
+  height: 100px;
+  margin: 5px;
+  scroll-snap-align: center;
+  border-radius: 10px;
+}
+@media screen and (max-width: 700px) {
+  .country-flag {
+    max-width: 100px;
+    min-width: 100px;
+    height: 70px;
+    margin: 5px;
+    scroll-snap-align: center;
+  }
+}
+.banner {
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+}
+.banner p {
+  margin: 10px;
+  width: clamp(400px, 50%, 600px);
+}
+.banner img {
+  width: auto;
+  border-radius: 10px;
+}
+.table {
+  margin: 0 auto;
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
