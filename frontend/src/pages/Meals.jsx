@@ -146,10 +146,7 @@ export default function SingleDish() {
           <div
             className="dish-description"
             style={{
-              background: `url(${dish[0].strMealThumb}) no-repeat`,
-              backgroundSize: "contain",
-              width: "50%",
-              height: "500px",
+              backgroundImage: `url(${dish[0].strMealThumb})`,
             }}
           />
         </div>
