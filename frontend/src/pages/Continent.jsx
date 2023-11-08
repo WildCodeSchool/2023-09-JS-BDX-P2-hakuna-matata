@@ -12,5 +12,4 @@ function Continent() {
     </div>
   );
 }
-
 export default Continent;

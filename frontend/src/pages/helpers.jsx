@@ -345,15 +345,16 @@ async function fetchByCategory(setStateCallBack, category = "Beef") {
  * that set the state in calling component
  * 2- the "id", is the id of the dish that we want to fetch
  */
-async function fetchById(setStateCallBack, id) {
+async function fetchById(id) {
   try {
     const response = await fetch(
       `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
     );
-    const dishes = await response.json();
-    setStateCallBack(() => dishes.meals);
+    const collection = await response.json();
+    // TODO: erreur si tableau vide
+    return collection.meals[0];
   } catch (err) {
-    setStateCallBack(() => []);
+    return [];
   }
 }
 /* search by continent
