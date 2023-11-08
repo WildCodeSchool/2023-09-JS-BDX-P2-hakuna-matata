@@ -1,10 +1,12 @@
 import { useContext } from "react";
+import { useLoaderData } from "react-router-dom";
 import CardDish from "../components/CardDish";
 import MyContext from "../components/Mycontext";
 import "./Country.css";
 
 export default function Country() {
-  const { country, countryDishes } = useContext(MyContext);
+  const country = useLoaderData();
+  const { countryDishes } = useContext(MyContext);
 
   return (
     <div>

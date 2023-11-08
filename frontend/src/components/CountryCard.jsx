@@ -3,7 +3,7 @@ import { useContext } from "react";
 import PropTypes from "prop-types";
 import { fetchByArea } from "../pages/helpers";
 import MyContext from "./Mycontext";
-import "./CountryCard.css";
+import "./CountryCard.scss";
 
 export default function CountryCard({ country }) {
   const { setCountry, setCountryDishes } = useContext(MyContext);
@@ -14,22 +14,48 @@ export default function CountryCard({ country }) {
     navigate(`/country/${country.CountryApi}`);
   }
   return (
-    <div className="myCard" onClick={GetData} aria-hidden="true">
-      <div className="flip">
-        <div
-          className="front"
-          style={{
-            backgroundImage: `url(${country.ImageURL})`,
-          }}
-        >
-          <h1 className="text-shadow">{country.Country}</h1>
-        </div>
-        <div className="back">
-          <h2>{country.Country}</h2>
-          <p className="truncate">{country.Description}</p>
+    <button type="button" onClick={GetData}>
+      <div className="wrapper" style={{ cursor: `grab` }}>
+        <div className="cols">
+          <div
+            className="col"
+            onTouchStart="this.classNameList.toggle('hover');"
+          >
+            <div className="container">
+              <div
+                className="front "
+                style={{ backgroundImage: ` url(${country.ImageURL})` }}
+              >
+                <div className="inner">
+                  <p>{country.Country}</p>
+                </div>
+              </div>
+              <div
+                className="back "
+                style={{
+                  backgroundImage: ` url(${country.ImageURL})`,
+
+                  backgroundSize: "100%",
+                  backgroundRepeat: "no-repeat",
+                }}
+              >
+                <div
+                  className="inner"
+                  style={{
+                    backgroundColor: "rgba(0 ,0,0, 0.2)",
+                    width: "100%",
+                    height: "100%",
+                    borderRadius: "10px",
+                  }}
+                >
+                  <p>{country.Description}</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </button>
   );
 }
 
