@@ -311,16 +311,14 @@ const countriesDetailed = [
  * that set the state in calling component
  * 2- the "area", is the region where we want to search (American, British ....)
  */
-async function fetchByArea(setStateCallBack, area = "American") {
+async function fetchByArea(area = "American") {
   try {
     const response = await fetch(
       `https://www.themealdb.com/api/json/v1/1/filter.php?a=${area}`
     );
     const dishes = await response.json();
-    setStateCallBack(() => [...dishes.meals]);
     return dishes.meals;
   } catch (err) {
-    setStateCallBack(() => []);
     return [];
   }
 }

@@ -1,12 +1,9 @@
-import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import CardDish from "../components/CardDish";
-import MyContext from "../components/Mycontext";
 import "./Country.css";
 
 export default function Country() {
-  const country = useLoaderData();
-  const { countryDishes } = useContext(MyContext);
+  const { country, countryDishes } = useLoaderData();
 
   return (
     <div>
@@ -28,8 +25,8 @@ export default function Country() {
       </div>
       <div className="table">
         {country.Country &&
-          countryDishes.length > 0 &&
-          countryDishes.map((ele) => <CardDish dish={ele} key={ele.idMeal} />)}
+          (countryDishes?.length ?? 0) > 0 &&
+          countryDishes?.map((ele) => <CardDish dish={ele} key={ele.idMeal} />)}
       </div>
     </div>
   );

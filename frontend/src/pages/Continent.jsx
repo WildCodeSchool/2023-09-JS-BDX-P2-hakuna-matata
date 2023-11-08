@@ -7,7 +7,7 @@ function Continent() {
   return (
     <div className="countries-container">
       {listCountries.map((pays) => (
-        <CountryCard country={pays} />
+        <CountryCard key={pays.Id} country={pays} />
       ))}
     </div>
   );
