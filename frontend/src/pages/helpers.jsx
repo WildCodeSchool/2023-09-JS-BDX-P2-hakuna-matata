@@ -2,7 +2,7 @@ const countries = [
   {
     Id: 0,
     Country: "all",
-    Description: "allo country ßitch",
+    Description: "allo country ",
     ImageURL: "./src/assets/flags/canada.png",
   },
   {
@@ -318,8 +318,10 @@ async function fetchByArea(setStateCallBack, area = "American") {
     );
     const dishes = await response.json();
     setStateCallBack(() => [...dishes.meals]);
+    return dishes.meals;
   } catch (err) {
     setStateCallBack(() => []);
+    return [];
   }
 }
 /* search by category

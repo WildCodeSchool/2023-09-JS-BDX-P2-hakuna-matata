@@ -1,29 +1,19 @@
-import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { fetchByContinent, continents } from "./helpers";
-import CardDish from "../components/CardDish";
+import { countriesDetailed } from "./helpers";
+import CountryCard from "../components/CountryCard";
 
 function Continent() {
-  const [dishesOfContinent, setDishesOfContinent] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
   const { continent } = useParams();
 
-  useEffect(() => {
-    async function getData() {
-      setIsLoading(() => true);
-      await fetchByContinent(setDishesOfContinent, continents.America);
-      setIsLoading(() => false);
-    }
-    getData();
-  }, []);
+  const listCountries = countriesDetailed.find(
+    (ele) => ele.Continent.toLowerCase() === continent
+  ).Countries;
 
   return (
-    <div className="table">
-      <h3>continent loaded is {continent}</h3>
-      {!isLoading &&
-        dishesOfContinent.map((element) => (
-          <CardDish dish={element} key={element.idMeal} />
-        ))}
+    <div className="countries-container">
+      {listCountries.map((pays) => (
+        <CountryCard country={pays} />
+      ))}
     </div>
   );
 }

@@ -1,10 +1,10 @@
-import { useOutletContext } from "react-router-dom";
-import "./Country.css";
+import { useContext } from "react";
 import CardDish from "../components/CardDish";
+import MyContext from "../components/Mycontext";
+import "./Country.css";
 
 export default function Country() {
-  const { country, countryDishes } = useOutletContext();
-  // console.log(countryDishes);
+  const { country, countryDishes } = useContext(MyContext);
 
   return (
     <div>
