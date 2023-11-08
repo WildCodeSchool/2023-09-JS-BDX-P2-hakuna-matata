@@ -8,7 +8,7 @@ import Home from "./pages/Home";
 import Continent from "./pages/Continent";
 import Country from "./pages/Country";
 import Meals from "./pages/Meals";
-import { countries, countriesDetailed } from "./pages/helpers";
+import { countries, countriesDetailed, fetchByArea } from "./pages/helpers";
 
 const router = createBrowserRouter([
   {
@@ -30,8 +30,13 @@ const router = createBrowserRouter([
       {
         path: "/country/:CountryApi",
         element: <Country />,
-        loader: ({ params }) => {
-          return countries.find((ele) => ele.CountryApi === params.CountryApi);
+        loader: async ({ params }) => {
+          return {
+            country: countries.find(
+              (ele) => ele.CountryApi === params.CountryApi
+            ),
+            countryDishes: await fetchByArea(params.CountryApi),
+          };
         },
       },
       {
