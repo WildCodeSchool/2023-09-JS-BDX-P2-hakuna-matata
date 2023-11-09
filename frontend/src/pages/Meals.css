@@ -63,10 +63,17 @@ h3 {
   border-radius: 40px;
 }
 @media only screen and (min-width: 769px) {
+  .category {
+    margin-right: 0;
+  }
   .containerecette {
     display: flex;
+    justify-content: space-evenly;
   }
-  .instructions {
+  .containercatli {
+    width: 100%;
+  }
+  .formatinstructions {
     width: 50%;
   }
 }

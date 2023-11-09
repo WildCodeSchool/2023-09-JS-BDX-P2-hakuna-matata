@@ -152,7 +152,9 @@ export default function SingleDish() {
             </ul>
           </div>
         </div>
-        <div>{formatInstructions(dish.strInstructions)}</div>
+        <div className="formatinstructions">
+          {formatInstructions(dish.strInstructions)}
+        </div>
       </div>
     </div>
   );
