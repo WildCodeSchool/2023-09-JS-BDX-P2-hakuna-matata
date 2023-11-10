@@ -10,6 +10,7 @@ export default function Country() {
       <div className="banner">
         <p className="description">{country.Description ?? ""}</p>
         <div
+          className="image"
           style={{
             backgroundImage: `url(${
               country
@@ -18,8 +19,8 @@ export default function Country() {
             })`,
             backgroundSize: `contain`,
             backgroundRepeat: "no-repeat",
-            width: `400px`,
-            height: `300px`,
+            width: `80%`,
+            height: `170px`,
           }}
         />
       </div>

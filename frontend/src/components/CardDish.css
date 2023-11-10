@@ -8,6 +8,17 @@
   align-items: flex-end;
   transition: all 0.3s ease-in-out;
 }
+
+.container-dish-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+}
+
+.dish-title {
+  width: fit-content;
+}
 .card-dish:hover {
   scale: 1.02;
 }
