@@ -116,3 +116,9 @@
     19px 19px rgba(0, 0, 0, 0.04),
     1.25rem 1.25rem rgba(0, 0, 0, 0.04);
 }
+.cols {
+  margin: 0 auto;
+}
+.wrapper {
+  margin: 0 auto;
+}

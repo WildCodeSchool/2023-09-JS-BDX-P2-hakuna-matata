@@ -31,7 +31,13 @@ function Home() {
   ];
   return (
     <div className="container">
-      <div className="banniere" />
+      <div className="banniere">
+        <img
+          className="banniere_img"
+          src="./src/assets/bannière.svg"
+          alt="Bannière"
+        />
+      </div>
       <h3 style={{ margin: `0 auto`, textAlign: "center" }}>
         Food treck the world
       </h3>

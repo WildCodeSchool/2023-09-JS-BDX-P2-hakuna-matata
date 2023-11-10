@@ -39,6 +39,7 @@ h4 {
   color: #ffffff;
   height: auto;
   margin: 0;
+  padding: 5px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -55,6 +56,7 @@ h4 {
 }
 .banniere_img {
   max-height: 419px;
+  width: 100%;
 }
 
 .plats {
@@ -72,18 +74,23 @@ h4 {
   color: white;
   position: relative;
   width: 100%;
-  height: 50px;
   background-color: #1b2123;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 10px;
 }
 
 .footer_map {
   width: 80px;
-  height: 50px;
   display: flex;
   align-items: center;
+  border-radius: 40px;
+  box-shadow: 2px 2px 2px white;
+  margin: auto;
+}
+.footer_map:hover {
+  filter: drop-shadow(0 0 0.25rem crimson);
 }
 .social-media {
   width: 250px;
@@ -123,4 +130,14 @@ h4 {
   #all-rights {
     display: none;
   }
+}
+.countries-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.countries-container button {
+  border: none;
+  background-color: #ffffff;
 }

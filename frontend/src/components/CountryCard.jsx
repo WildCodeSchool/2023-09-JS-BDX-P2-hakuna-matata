@@ -40,7 +40,7 @@ export default function CountryCard({ country }) {
               <div
                 className="inner"
                 style={{
-                  backgroundColor: "rgba(0 ,0,0, 0.2)",
+                  backgroundColor: "rgba(0 ,0,0, 0.75)",
                   width: "100%",
                   height: "100%",
                   borderRadius: "10px",
