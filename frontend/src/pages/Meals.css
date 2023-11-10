@@ -8,6 +8,7 @@
 
 h1 {
   font-size: 31px;
+  font-family: monospace;
   color: black;
 }
 
@@ -16,19 +17,21 @@ h3 {
 }
 
 .image-recette {
-  height: 500px;
+  height: 424px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
 }
 .dish-ingredients {
-  color: rgb(152, 146, 146);
+  color: rgb(174 74 74);
   width: 100%;
+  padding-block: 46px;
+  margin-left: 61px;
 }
 .big-card .dish-description {
   background-size: cover;
-  height: 500px;
+  height: 382px;
 }
 .image-recette div {
   width: 100%;
@@ -36,18 +39,41 @@ h3 {
 }
 
 .speciality {
-  padding-bottom: 10px;
+  padding-bottom: 65px;
   font-size: 22px;
   color: red;
+  display: flex;
+  justify-content: center;
 }
 
 .category {
-  padding-bottom: 10px;
   font-size: 18px;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #d34848;
+  border-radius: 15px;
+  margin-right: 61%;
+  color: wheat;
+  width: fit-content;
 }
 .instructions {
   background-color: #d34848;
   color: wheat;
   padding: 44px;
   border-radius: 40px;
+}
+@media only screen and (min-width: 769px) {
+  .category {
+    margin-right: 0;
+  }
+  .containerecette {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .containercatli {
+    width: 100%;
+  }
+  .formatinstructions {
+    width: 50%;
+  }
 }
