@@ -28,7 +28,7 @@ export default function Caroussel() {
   return (
     <Swiper
       spaceBetween={30}
-      centeredSlides="true"
+      centeredSlides
       autoplay={{
         delay: 2500,
         disableOnInteraction: false,
@@ -36,7 +36,7 @@ export default function Caroussel() {
       pagination={{
         clickable: true,
       }}
-      navigation="true"
+      navigation
       modules={[Autoplay, Pagination, Navigation]}
       onAutoplayTimeLeft={onAutoplayTimeLeft}
       className="mySwiper"
