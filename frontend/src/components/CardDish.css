@@ -1,6 +1,13 @@
-.card-dish {
-  width: 200px;
-  height: 200px;
+.container-dish-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+}
+
+.card-dish-image-button {
+  width: 270px;
+  height: 270px;
   border-radius: 10px;
   display: inline-flex;
   margin: 10px;
@@ -9,23 +16,10 @@
   transition: all 0.3s ease-in-out;
 }
 
-.container-dish-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 70%;
-}
-
-.dish-title {
-  width: fit-content;
-}
 .card-dish:hover {
   scale: 1.02;
 }
-.card-dish h3 {
-  color: aliceblue;
-  margin: 5px;
-}
+
 .card-dish-top {
   width: 100%;
   background-color: rgba(6, 6, 6, 0.3);
@@ -34,6 +28,11 @@
   animation-name: appear;
   animation-duration: 0.4s;
 }
+.dish-title-desktop {
+  color: aliceblue;
+  margin: 5px;
+}
+
 @keyframes appear {
   from {
     opacity: 0.1;
@@ -44,8 +43,8 @@
     scale: 1;
   }
 }
-@media screen and (max-width: 600px) {
-  .card-dish {
+/* @media screen and (max-width: 600px) {
+  .card-dish-image-button {
     width: 100%;
     height: 300px;
     border-radius: 10px;
@@ -58,7 +57,7 @@
   .card-dish:hover {
     scale: 1.02;
   }
-  .card-dish h3 {
+  .dish-title-desktop {
     color: aliceblue;
     margin: 5px;
   }
@@ -70,4 +69,4 @@
     animation-name: appear;
     animation-duration: 0.4s;
   }
-}
+} */

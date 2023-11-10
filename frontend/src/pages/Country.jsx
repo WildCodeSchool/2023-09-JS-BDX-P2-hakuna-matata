@@ -6,7 +6,8 @@ export default function Country() {
   const { country, countryDishes } = useLoaderData();
 
   return (
-    <div>
+    <div className="container-country-page">
+      <h1>{country.strArea}</h1>
       <div className="banner">
         <p className="description">{country.Description ?? ""}</p>
         <div
@@ -20,7 +21,7 @@ export default function Country() {
             backgroundSize: `contain`,
             backgroundRepeat: "no-repeat",
             width: `80%`,
-            height: `170px`,
+            height: `190px`,
           }}
         />
       </div>

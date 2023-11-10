@@ -8,15 +8,15 @@ export default function CardDish({ dish }) {
   const navigate = useNavigate();
   return (
     <div className="container-dish-card">
-      <div>
-        <h3 className="dish-title">{dish.strMeal}</h3>
+      <div className="dish-title-mobile-container">
+        <h3 className="dish-title-mobile">{dish.strMeal}</h3>
       </div>
       <button
         type="button"
         onClick={() => {
           navigate(`/meals/${dish.idMeal}`);
         }}
-        className="card-dish"
+        className="card-dish-image-button"
         style={{
           backgroundImage: `url(${dish.strMealThumb})`,
           backgroundRepeat: "no-repeat",
@@ -29,7 +29,7 @@ export default function CardDish({ dish }) {
           className="card-dish-top"
           style={{ display: !isBeenHovered ? "none" : "block" }}
         >
-          <h3 className="dish-title">{dish.strMeal}</h3>
+          <h3 className="dish-title-desktop">{dish.strMeal}</h3>
         </div>
       </button>
     </div>
