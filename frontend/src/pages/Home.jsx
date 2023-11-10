@@ -1,6 +1,7 @@
 import React from "react";
 import Map from "../components/Map";
 import CardDish from "../components/CardDish";
+import Caroussel from "../components/Caroussel";
 
 function Home() {
   const weeklyDishes = [
@@ -31,6 +32,7 @@ function Home() {
   ];
   return (
     <div className="container">
+      <Caroussel />
       <div className="banniere">
         <img
           className="banniere_img"
