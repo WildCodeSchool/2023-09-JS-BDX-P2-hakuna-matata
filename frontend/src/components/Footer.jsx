@@ -5,7 +5,7 @@ function Footer() {
     <footer className="footer">
       <div className="container">
         <div id="scroll_to_top">
-          <a href="#top">
+          <a href="/#top">
             <img
               className="footer_map"
               src="./src/assets/footer_map.svg"
