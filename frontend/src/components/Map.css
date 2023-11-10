@@ -3,9 +3,12 @@
   filter: drop-shadow(0 0 0.25rem rgb(129, 104, 109));
 }
 .map-svg {
-  width: 800px;
-  height: 464px;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
+
 @media screen and (max-width: 700px) {
   .map-svg {
     width: 600px;
@@ -20,7 +23,35 @@
 }
 @media screen and (max-width: 576px) {
   .map-svg {
-    width: 500px;
+    width: 100%;
     height: auto;
   }
+}
+.africa {
+  left: 45%;
+  top: 45%;
+}
+.america {
+  left: 7%;
+  top: 23%;
+}
+.europe {
+  top: 13%;
+  left: 48%;
+}
+.asia {
+  top: 30%;
+  right: 15%;
+  width: auto;
+}
+.hat {
+  opacity: 0;
+}
+.logo {
+  margin: 5px 0;
+  height: 50px;
+  transition: all 0.3s ease-in-out;
+}
+.logo:hover {
+  transform: scale(1.1);
 }
