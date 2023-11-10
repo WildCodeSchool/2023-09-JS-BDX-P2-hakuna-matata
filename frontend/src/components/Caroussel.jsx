@@ -25,6 +25,33 @@ export default function Caroussel() {
     progressCircle.current.style.setProperty("--progress", 1 - progress);
     progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
+  const worldRegions = [
+    {
+      name: "Mediterranean Cuisine",
+      imgUrl: "./src/assets/salade.jpg",
+      description:
+        "Delicious and healthy foods from the Mediterranean region, known for olive oil, fresh vegetables, and a variety of herbs and spices.",
+    },
+    {
+      name: "Asian Cuisine",
+      imgUrl: "./src/assets/sushi.jpg",
+      description:
+        "Diverse and flavorful foods from Asia, including Chinese, Japanese, Indian, and Southeast Asian dishes, featuring a balance of flavors and unique cooking techniques.",
+    },
+    {
+      name: "North African Cuisine",
+      imgUrl: "./src/assets/tajine.jpg",
+      description:
+        "Rich and aromatic foods from North Africa, combining influences from Arabic, Berber, and Mediterranean cuisines, often featuring couscous, tagines, and a mix of spices.",
+    },
+    {
+      name: "North American Cuisine",
+      imgUrl: "./src/assets/hamburger.jpg",
+      description:
+        "Varied and eclectic foods from North America, reflecting the cultural diversity of the continent, with influences from Native American, European, African, and Asian culinary traditions.",
+    },
+  ];
+
   return (
     <Swiper
       spaceBetween={30}
@@ -41,7 +68,17 @@ export default function Caroussel() {
       onAutoplayTimeLeft={onAutoplayTimeLeft}
       className="mySwiper"
     >
-      <SwiperSlide>Slide 1</SwiperSlide>
+      <SwiperSlide>
+        <div
+          style={{
+            backgroundImage: `url(${worldRegions[0].imgUrl})`,
+            backgroundRepeat: `no-repeat`,
+            backgroundSize: `cover`,
+            height: `300px`,
+            width: `100%`,
+          }}
+        />
+      </SwiperSlide>
       <SwiperSlide>Slide 2</SwiperSlide>
       <SwiperSlide>Slide 3</SwiperSlide>
       <SwiperSlide>Slide 4</SwiperSlide>
