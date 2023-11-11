@@ -33,18 +33,13 @@ function Home() {
   return (
     <div className="container">
       <Caroussel />
-      <div className="banniere">
-        <img
-          className="banniere_img"
-          src="./src/assets/bannière.svg"
-          alt="Bannière"
-        />
-      </div>
-      <h3 style={{ margin: `0 auto`, textAlign: "center" }}>
+      <h3 style={{ margin: `0 auto`, textAlign: "center", padding: `30px` }}>
         Food treck the world
       </h3>
       <Map />
-      <h3 style={{ margin: `0 auto`, textAlign: "center" }}>Weekly dishes</h3>
+      <h3 style={{ margin: `0 auto`, textAlign: "center", padding: `30px` }}>
+        Weekly dishes
+      </h3>
       <div className="weekly">
         {weeklyDishes.map((dish) => (
           <CardDish key={dish.idMeal} dish={dish} />

@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import "./Caroussel.css";
 // Import Swiper React components
 /* eslint-disable import/no-unresolved */
 
@@ -21,10 +22,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 export default function Caroussel() {
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
-  const onAutoplayTimeLeft = (s, time, progress) => {
-    progressCircle.current.style.setProperty("--progress", 1 - progress);
-    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
-  };
+
   const worldRegions = [
     {
       name: "Mediterranean Cuisine",
@@ -57,7 +55,7 @@ export default function Caroussel() {
       spaceBetween={30}
       centeredSlides
       autoplay={{
-        delay: 2500,
+        delay: 5000,
         disableOnInteraction: false,
       }}
       pagination={{
@@ -65,28 +63,28 @@ export default function Caroussel() {
       }}
       navigation
       modules={[Autoplay, Pagination, Navigation]}
-      onAutoplayTimeLeft={onAutoplayTimeLeft}
+      // onAutoplayTimeLeft={onAutoplayTimeLeft}
       className="mySwiper"
     >
-      <SwiperSlide>
-        <div
-          style={{
-            backgroundImage: `url(${worldRegions[0].imgUrl})`,
-            backgroundRepeat: `no-repeat`,
-            backgroundSize: `cover`,
-            height: `300px`,
-            width: `100%`,
-          }}
-        />
-      </SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
-      <SwiperSlide>Slide 5</SwiperSlide>
-      <SwiperSlide>Slide 6</SwiperSlide>
-      <SwiperSlide>Slide 7</SwiperSlide>
-      <SwiperSlide>Slide 8</SwiperSlide>
-      <SwiperSlide>Slide 9</SwiperSlide>
+      {worldRegions.map((region) => (
+        <SwiperSlide key={region.name}>
+          <div
+            className="caroussel"
+            style={{
+              backgroundImage: `url(${region.imgUrl})`,
+              backgroundRepeat: `no-repeat`,
+              backgroundSize: `cover`,
+              width: `100%`,
+            }}
+          >
+            <div className="caroussel-text">
+              <h2>{region.name}</h2>
+              <p>{region.description}</p>
+            </div>
+          </div>
+        </SwiperSlide>
+      ))}
+
       <div className="autoplay-progress" slot="container-end">
         <svg viewBox="0 0 48 48" ref={progressCircle}>
           <circle cx="24" cy="24" r="20" />
