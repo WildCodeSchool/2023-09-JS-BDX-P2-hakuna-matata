@@ -11,7 +11,7 @@ export default function Country() {
       <div className="banner">
         <p className="description">{country.Description ?? ""}</p>
         <div
-          className="image"
+          className="image flag"
           style={{
             backgroundImage: `url(${
               country

@@ -8,7 +8,7 @@ export default function CardDish({ dish }) {
   const navigate = useNavigate();
   return (
     <div className="container-dish-card">
-      <div className="dish-title-mobile-container">
+      <div className="title-dish-mobile-container">
         <h3 className="dish-title-mobile">{dish.strMeal}</h3>
       </div>
       <button
@@ -16,7 +16,7 @@ export default function CardDish({ dish }) {
         onClick={() => {
           navigate(`/meals/${dish.idMeal}`);
         }}
-        className="card-dish-image-button"
+        className="image-card-dish-button"
         style={{
           backgroundImage: `url(${dish.strMealThumb})`,
           backgroundRepeat: "no-repeat",

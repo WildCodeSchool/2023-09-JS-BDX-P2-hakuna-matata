@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import "./CountryCard.scss";
+import "./CountryCard.css";
 
 export default function CountryCard({ country }) {
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ export default function CountryCard({ country }) {
         >
           <div className="container">
             <div
-              className="front "
+              className="front flag "
               style={{ backgroundImage: ` url(${country.ImageURL})` }}
             >
               <div className="inner">
@@ -29,7 +30,7 @@ export default function CountryCard({ country }) {
               </div>
             </div>
             <div
-              className="back "
+              className="back flag"
               style={{
                 backgroundImage: ` url(${country.ImageURL})`,
 
