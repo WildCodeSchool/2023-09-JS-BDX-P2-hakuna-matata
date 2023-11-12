@@ -19,13 +19,22 @@
   display: flex;
   justify-content: center;
   margin: 10px auto;
+  width: 70%;
 }
-.banner p {
+@media screen and (max-width: 900px) {
+  .banner {
+    flex-direction: column;
+  }
+  .banner .description {
+    margin: 10px;
+    width: 100%;
+  }
+}
+.banner .description {
   margin: 10px;
-  width: clamp(400px, 50%, 600px);
+  width: 50%;
 }
 .banner img {
-  width: auto;
   border-radius: 10px;
 }
 .table {
@@ -33,6 +42,21 @@
   width: 70%;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+}
+.filters {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+.filters button {
+  min-width: 70px;
+  margin: 5px;
+  background-color: #1b2123;
+  color: white;
+  border-radius: 2px;
+  padding: 4px;
 }
