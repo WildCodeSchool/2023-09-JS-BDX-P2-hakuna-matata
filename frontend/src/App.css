@@ -73,14 +73,27 @@ h4 {
 .footer {
   color: white;
   position: relative;
-  width: 100%;
-  background-color: #1b2123;
+  width: 70%;
+
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 10px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    width: 100%;
+  }
 }
 
+.footer-container {
+  top: calc(100% - 60px);
+  display: block;
+  position: fixed;
+  width: 100%;
+  background-color: #1b2123;
+}
 .footer_map {
   width: 80px;
   display: flex;
@@ -133,7 +146,8 @@ h4 {
 }
 .countries-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }

@@ -2,6 +2,7 @@ import React from "react";
 import Map from "../components/Map";
 import CardDish from "../components/CardDish";
 import Caroussel from "../components/Caroussel";
+import Spacer from "../components/Spacer";
 
 function Home() {
   const weeklyDishes = [
@@ -45,35 +46,9 @@ function Home() {
           <CardDish key={dish.idMeal} dish={dish} />
         ))}
       </div>
+      <Spacer />
     </div>
   );
 }
 
 export default Home;
-
-// const worldRegions = [
-//   {
-//     name: "Mediterranean Cuisine",
-//     imgUrl: "./src/assets/salade.jpg",
-//     description:
-//       "Delicious and healthy foods from the Mediterranean region, known for olive oil, fresh vegetables, and a variety of herbs and spices.",
-//   },
-//   {
-//     name: "Asian Cuisine",
-//     imgUrl: "./src/assets/sushi.jpg",
-//     description:
-//       "Diverse and flavorful foods from Asia, including Chinese, Japanese, Indian, and Southeast Asian dishes, featuring a balance of flavors and unique cooking techniques.",
-//   },
-//   {
-//     name: "North African Cuisine",
-//     imgUrl: "./src/assets/tajine.jpg",
-//     description:
-//       "Rich and aromatic foods from North Africa, combining influences from Arabic, Berber, and Mediterranean cuisines, often featuring couscous, tagines, and a mix of spices.",
-//   },
-//   {
-//     name: "North American Cuisine",
-//     imgUrl: "./src/assets/hamburger.jpg",
-//     description:
-//       "Varied and eclectic foods from North America, reflecting the cultural diversity of the continent, with influences from Native American, European, African, and Asian culinary traditions.",
-//   },
-// ];

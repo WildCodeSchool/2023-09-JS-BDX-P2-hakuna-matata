@@ -20,7 +20,7 @@
   width: 100%;
   background-color: rgba(6, 6, 6, 0.75);
   text-align: center;
-  border-radius: 0 0px 10px 10px;
+  border-radius: 0 0 5px 5px;
   animation-name: appear;
   animation-duration: 0.4s;
 }

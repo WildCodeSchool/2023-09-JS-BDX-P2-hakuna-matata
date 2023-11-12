@@ -1,6 +1,7 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
 import "./Meals.css";
+import Spacer from "../components/Spacer";
 
 export default function SingleDish() {
   const dish = useLoaderData();
@@ -156,6 +157,7 @@ export default function SingleDish() {
           {formatInstructions(dish.strInstructions)}
         </div>
       </div>
+      <Spacer />
     </div>
   );
 }

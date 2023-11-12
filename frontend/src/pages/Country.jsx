@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import CardDish from "../components/CardDish";
 import "./Country.css";
+import Spacer from "../components/Spacer";
 
 export default function Country() {
   const { country, countryDishes } = useLoaderData();
@@ -28,6 +29,7 @@ export default function Country() {
           (countryDishes?.length ?? 0) > 0 &&
           countryDishes?.map((ele) => <CardDish dish={ele} key={ele.idMeal} />)}
       </div>
+      <Spacer />
     </div>
   );
 }
