@@ -22,6 +22,12 @@ body {
     "Lucida Sans", Arial, sans-serif;
 }
 
+.App {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 86px;
+}
+
 img {
   width: 100%;
 }
@@ -88,9 +94,9 @@ h4 {
 }
 
 .footer-container {
-  top: calc(100% - 60px);
+  bottom: 0;
   display: block;
-  position: fixed;
+  position: absolute;
   width: 100%;
   background-color: #1b2123;
 }
@@ -153,5 +159,6 @@ h4 {
 }
 .countries-container button {
   border: none;
-  background-color: #ffffff;
+  background-color: #eee;
+  border-radius: 2px;
 }

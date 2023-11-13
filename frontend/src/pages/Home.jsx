@@ -2,7 +2,6 @@ import React from "react";
 import Map from "../components/Map";
 import CardDish from "../components/CardDish";
 import Caroussel from "../components/Caroussel";
-import Spacer from "../components/Spacer";
 
 function Home() {
   const weeklyDishes = [
@@ -34,19 +33,34 @@ function Home() {
   return (
     <div className="container">
       <Caroussel />
-      <h3 style={{ margin: `0 auto`, textAlign: "center", padding: `30px` }}>
-        Food treck the world
-      </h3>
+      <h1
+        style={{
+          margin: `0 auto`,
+          textAlign: "center",
+          padding: `30px`,
+          color: "white",
+          backgroundColor: `#1b2123`,
+        }}
+      >
+        Taste the world
+      </h1>
       <Map />
-      <h3 style={{ margin: `0 auto`, textAlign: "center", padding: `30px` }}>
-        Weekly dishes
-      </h3>
+      <h2
+        style={{
+          margin: `0 auto`,
+          textAlign: "center",
+          padding: `30px`,
+          color: "white",
+          backgroundColor: `#1b2123`,
+        }}
+      >
+        Our weekly selection
+      </h2>
       <div className="weekly">
         {weeklyDishes.map((dish) => (
           <CardDish key={dish.idMeal} dish={dish} />
         ))}
       </div>
-      <Spacer />
     </div>
   );
 }

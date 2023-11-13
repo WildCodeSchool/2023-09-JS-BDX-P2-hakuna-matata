@@ -1,6 +1,5 @@
 import { useLoaderData } from "react-router-dom";
 import CountryCard from "../components/CountryCard";
-import Spacer from "../components/Spacer";
 
 function Continent() {
   const listCountries = useLoaderData();
@@ -12,7 +11,6 @@ function Continent() {
           <CountryCard key={pays.Id} country={pays} />
         ))}
       </div>
-      <Spacer />
     </div>
   );
 }

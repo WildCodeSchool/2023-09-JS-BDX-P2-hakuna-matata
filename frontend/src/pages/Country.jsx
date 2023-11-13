@@ -2,7 +2,6 @@ import { useLoaderData } from "react-router-dom";
 import { useState } from "react";
 import CardDish from "../components/CardDish";
 import "./Country.css";
-import Spacer from "../components/Spacer";
 
 export default function Country() {
   const { country, countryDishes } = useLoaderData();
@@ -25,15 +24,13 @@ export default function Country() {
           <p>{country.Description ?? ""}</p>
         </div>
         <div
+          className="flag-img"
           style={{
             backgroundImage: `url(${
               country
                 ? country.ImageURL
                 : "https://placehold.co/600x400/EEE/31343C"
             })`,
-            backgroundSize: `contain`,
-            backgroundRepeat: "no-repeat",
-            width: `400px`,
           }}
         />
       </div>
@@ -52,7 +49,6 @@ export default function Country() {
           (dishes?.length ?? 0) > 0 &&
           dishes?.map((ele) => <CardDish dish={ele} key={ele.idMeal} />)}
       </div>
-      <Spacer />
     </div>
   );
 }

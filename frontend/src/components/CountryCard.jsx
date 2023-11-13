@@ -26,10 +26,11 @@ export default function CountryCard({ country }) {
                 backgroundImage: `url(${country.ImageURL})`,
                 backgroundRepeat: `no-repeat`,
                 backgroundSize: `100% 100%`,
+                borderRadius: `2px`,
               }}
             />
           </div>
-          <div className="flip-card-back">
+          <div className="flip-card-back" style={{ borderRadius: `2px` }}>
             <h3>{country.Country}</h3>
             <p className="line-clamp">{country.Description}</p>
           </div>

@@ -42,7 +42,7 @@ const router = createBrowserRouter([
               return fetchById(ele.idMeal);
             })
           );
-          dishesDetailed.foreach((ele, i) => {
+          dishesDetailed.forEach((ele, i) => {
             dishes[i].strCategory = ele.strCategory;
           });
           return {
