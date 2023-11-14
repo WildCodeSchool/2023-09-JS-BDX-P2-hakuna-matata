@@ -36,11 +36,20 @@ const router = createBrowserRouter([
         path: "/country/:CountryApi",
         element: <Country />,
         loader: async ({ params }) => {
+          const dishes = await fetchByArea(params.CountryApi);
+          const dishesDetailed = await Promise.all(
+            dishes.map((ele) => {
+              return fetchById(ele.idMeal);
+            })
+          );
+          dishesDetailed.forEach((ele, i) => {
+            dishes[i].strCategory = ele.strCategory;
+          });
           return {
             country: countries.find(
               (ele) => ele.CountryApi === params.CountryApi
             ),
-            countryDishes: await fetchByArea(params.CountryApi),
+            countryDishes: dishes,
           };
         },
       },

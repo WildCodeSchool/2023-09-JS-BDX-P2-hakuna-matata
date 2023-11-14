@@ -1,7 +1,10 @@
 .form-select {
+  color: white;
+  padding: 0 10px;
   width: 60%;
-  height: 30px;
+  height: 35px;
   border-radius: 5px;
-  margin: 5px auto;
+  margin: 30px auto;
   display: block;
+  background-color: #1b2123;
 }

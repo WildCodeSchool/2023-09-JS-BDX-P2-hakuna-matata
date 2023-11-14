@@ -1,6 +1,7 @@
 import React from "react";
 import Map from "../components/Map";
 import CardDish from "../components/CardDish";
+import Caroussel from "../components/Caroussel";
 
 function Home() {
   const weeklyDishes = [
@@ -31,12 +32,30 @@ function Home() {
   ];
   return (
     <div className="container">
-      <div className="banniere" />
-      <h3 style={{ margin: `0 auto`, textAlign: "center" }}>
-        Food treck the world
-      </h3>
+      <Caroussel />
+      <h1
+        style={{
+          margin: `0 auto`,
+          textAlign: "center",
+          padding: `30px`,
+          color: "white",
+          backgroundColor: `#1b2123`,
+        }}
+      >
+        Taste the world
+      </h1>
       <Map />
-      <h3 style={{ margin: `0 auto`, textAlign: "center" }}>Weekly dishes</h3>
+      <h2
+        style={{
+          margin: `0 auto`,
+          textAlign: "center",
+          padding: `30px`,
+          color: "white",
+          backgroundColor: `#1b2123`,
+        }}
+      >
+        Our weekly selection
+      </h2>
       <div className="weekly">
         {weeklyDishes.map((dish) => (
           <CardDish key={dish.idMeal} dish={dish} />
@@ -47,30 +66,3 @@ function Home() {
 }
 
 export default Home;
-
-// const worldRegions = [
-//   {
-//     name: "Mediterranean Cuisine",
-//     imgUrl: "./src/assets/salade.jpg",
-//     description:
-//       "Delicious and healthy foods from the Mediterranean region, known for olive oil, fresh vegetables, and a variety of herbs and spices.",
-//   },
-//   {
-//     name: "Asian Cuisine",
-//     imgUrl: "./src/assets/sushi.jpg",
-//     description:
-//       "Diverse and flavorful foods from Asia, including Chinese, Japanese, Indian, and Southeast Asian dishes, featuring a balance of flavors and unique cooking techniques.",
-//   },
-//   {
-//     name: "North African Cuisine",
-//     imgUrl: "./src/assets/tajine.jpg",
-//     description:
-//       "Rich and aromatic foods from North Africa, combining influences from Arabic, Berber, and Mediterranean cuisines, often featuring couscous, tagines, and a mix of spices.",
-//   },
-//   {
-//     name: "North American Cuisine",
-//     imgUrl: "./src/assets/hamburger.jpg",
-//     description:
-//       "Varied and eclectic foods from North America, reflecting the cultural diversity of the continent, with influences from Native American, European, African, and Asian culinary traditions.",
-//   },
-// ];
