@@ -33,7 +33,7 @@ export default function Map() {
   }
 
   return (
-    <div>
+    <div id="mapi" style={{ position: `relative` }}>
       <svg
         className="map-svg"
         xmlns="http://www.w3.org/2000/svg"

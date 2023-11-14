@@ -21,7 +21,7 @@ export default function SingleDish() {
 
   return (
     <div className="big-card">
-      <div className="container">
+      <div className="container-meals">
         <div className="image-container">
           <img src="../src/assets/toque.svg" alt="logo" />
         </div>
