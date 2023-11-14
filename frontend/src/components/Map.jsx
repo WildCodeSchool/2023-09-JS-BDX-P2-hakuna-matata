@@ -34,8 +34,6 @@ export default function Map() {
 
   return (
     <div id="mapi" style={{ position: `relative` }}>
-      <img src="../src/assets/fork.svg" className="fork" id="fork" alt="" />
-
       <svg
         className="map-svg"
         xmlns="http://www.w3.org/2000/svg"
