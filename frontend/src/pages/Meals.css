@@ -19,13 +19,14 @@ h3 {
 }
 .dish-ingredients {
   color: rgb(174 74 74);
-  width: 100%;
   padding-block: 46px;
   margin-left: 61px;
 }
 .big-card .dish-description {
   background-size: cover;
+  background-repeat: no-repeat;
   height: 382px;
+  margin: 0 auto;
 }
 .image-recette div {
   width: 100%;
@@ -55,6 +56,7 @@ h3 {
   color: wheat;
   padding: 44px;
   border-radius: 40px;
+  margin-bottom: 5px;
 }
 
 @media only screen and (min-width: 769px) {
@@ -70,6 +72,11 @@ h3 {
   }
   .formatinstructions {
     width: 50%;
+  }
+  .big-card .dish-description {
+    width: 60%;
+    height: 382px;
+    margin: 0 auto;
   }
 }
 @keyframes image-slide {

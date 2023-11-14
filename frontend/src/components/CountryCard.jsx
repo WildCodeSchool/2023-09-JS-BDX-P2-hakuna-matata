@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
-import "./CountryCard.scss";
+import "./CountryCard.css";
 
 export default function CountryCard({ country }) {
   const navigate = useNavigate();
@@ -14,41 +14,25 @@ export default function CountryCard({ country }) {
       className="wrapper"
       style={{ cursor: `grab` }}
     >
-      <div className="cols">
-        <div
-          className="col"
-          onTouchStart={(event) => event.target.classNameList.toggle("hover")}
-        >
-          <div className="container">
+      <div className="flip-card">
+        <div className="flip-card-inner">
+          <div className="flip-card-front">
             <div
-              className="front "
-              style={{ backgroundImage: ` url(${country.ImageURL})` }}
-            >
-              <div className="inner">
-                <p>{country.Country}</p>
-              </div>
-            </div>
-            <div
-              className="back "
+              src={country.ImageURL}
+              alt="Avatar"
               style={{
-                backgroundImage: ` url(${country.ImageURL})`,
-
-                backgroundSize: "100%",
-                backgroundRepeat: "no-repeat",
+                width: "300px",
+                aspectRatio: `3 / 2`,
+                backgroundImage: `url(${country.ImageURL})`,
+                backgroundRepeat: `no-repeat`,
+                backgroundSize: `100% 100%`,
+                borderRadius: `2px`,
               }}
-            >
-              <div
-                className="inner"
-                style={{
-                  backgroundColor: "rgba(0 ,0,0, 0.2)",
-                  width: "100%",
-                  height: "100%",
-                  borderRadius: "10px",
-                }}
-              >
-                <p>{country.Description}</p>
-              </div>
-            </div>
+            />
+          </div>
+          <div className="flip-card-back" style={{ borderRadius: `2px` }}>
+            <h3>{country.Country}</h3>
+            <p className="line-clamp">{country.Description}</p>
           </div>
         </div>
       </div>

@@ -5,10 +5,12 @@ function Continent() {
   const listCountries = useLoaderData();
 
   return (
-    <div className="countries-container">
-      {listCountries.map((pays) => (
-        <CountryCard key={pays.Id} country={pays} />
-      ))}
+    <div>
+      <div className="countries-container container">
+        {listCountries.map((pays) => (
+          <CountryCard key={pays.Id} country={pays} />
+        ))}
+      </div>
     </div>
   );
 }

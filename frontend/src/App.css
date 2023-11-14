@@ -1,3 +1,7 @@
+:root {
+  --destination-x: "0px";
+  --destination-y: "0px";
+}
 * {
   margin: 0;
   padding: 0;
@@ -22,6 +26,12 @@ body {
     "Lucida Sans", Arial, sans-serif;
 }
 
+.App {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 86px;
+}
+
 img {
   width: 100%;
 }
@@ -39,6 +49,7 @@ h4 {
   color: #ffffff;
   height: auto;
   margin: 0;
+  padding: 5px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -55,6 +66,7 @@ h4 {
 }
 .banniere_img {
   max-height: 419px;
+  width: 100%;
 }
 
 .plats {
@@ -71,19 +83,37 @@ h4 {
 .footer {
   color: white;
   position: relative;
-  width: 100%;
-  height: 50px;
-  background-color: #1b2123;
+  width: 70%;
+
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 10px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    width: 100%;
+  }
 }
 
+.footer-container {
+  bottom: 0;
+  display: block;
+  position: absolute;
+  width: 100%;
+  background-color: #1b2123;
+}
 .footer_map {
   width: 80px;
-  height: 50px;
   display: flex;
   align-items: center;
+  border-radius: 40px;
+  box-shadow: 2px 2px 2px white;
+  margin: auto;
+}
+.footer_map:hover {
+  filter: drop-shadow(0 0 0.25rem crimson);
 }
 .social-media {
   width: 250px;
@@ -122,5 +152,47 @@ h4 {
   }
   #all-rights {
     display: none;
+  }
+}
+.countries-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.countries-container button {
+  border: none;
+  background-color: #eee;
+  border-radius: 2px;
+}
+
+.fork {
+  position: absolute;
+  top: -160px;
+  left: 0;
+  height: 230px;
+  width: 36px;
+  color: #1b2123;
+  transform: rotate(0.25turn);
+  z-index: 10;
+  transition: all 0.3s;
+}
+.fork-svg {
+  fill: #1b2123;
+  stroke: #1b2123;
+}
+.slide {
+  animation: slideDown 1s ease 0s 0.5 normal forwards;
+}
+@keyframes slideDown {
+  0% {
+    transform: scaleY(0);
+    transform-origin: 100% 0%;
+  }
+
+  100% {
+    transform: scaleY(1);
+    transform-origin: 100% 0%;
   }
 }
