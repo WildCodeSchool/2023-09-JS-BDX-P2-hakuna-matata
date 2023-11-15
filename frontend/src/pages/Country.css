@@ -5,6 +5,16 @@
   width: 70%;
 }
 
+.description h2 {
+  display: flex;
+  justify-content: space-around;
+  font-size: 72px;
+}
+
+.description p {
+  margin-block: 25px;
+  text-align: justify;
+}
 @media screen and (max-width: 900px) {
   .banner {
     width: 80%;
