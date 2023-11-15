@@ -15,7 +15,7 @@
 
 .description p {
   margin-block: 25px;
-  text-align: justify;
+  text-align: center;
 }
 @media screen and (max-width: 900px) {
   .banner {
