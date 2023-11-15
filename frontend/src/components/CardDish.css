@@ -9,18 +9,35 @@
   flex-direction: column;
   align-items: center;
 }
+@media screen and (max-width: 600px) {
+  .image-card-dish-button {
+    width: 100%;
+    height: 200px;
+    border-radius: 4px;
+    display: inline-flex;
+    margin: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+  .container-dish-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
 
 .title-dish-mobile-container {
   color: #d34848;
 }
 
 .image-card-dish-button {
-  width: 200px;
-  height: 200px;
-  border-radius: 4px;
-  border: none;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
   display: inline-flex;
   margin: 10px;
+  justify-content: center;
+  align-items: flex-end;
   transition: all 0.3s ease-in-out;
 }
 

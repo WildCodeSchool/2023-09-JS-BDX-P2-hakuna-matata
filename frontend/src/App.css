@@ -20,6 +20,7 @@
 }
 
 body {
+  min-width: 450px;
   margin: 0;
   background-color: #ffffff;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",

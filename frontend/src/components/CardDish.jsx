@@ -20,7 +20,8 @@ export default function CardDish({ dish }) {
         style={{
           backgroundImage: `url(${dish.strMealThumb})`,
           backgroundRepeat: "no-repeat",
-          backgroundSize: `contain`,
+          backgroundSize: `100% `,
+          aspectRatio: ` 4 / 3`,
         }}
         onMouseEnter={() => setIsBeenHovered(true)}
         onMouseLeave={() => setIsBeenHovered(false)}
