@@ -21,6 +21,7 @@ h3 {
   color: rgb(174 74 74);
   padding-block: 46px;
   margin-left: 61px;
+  line-height: 1.5;
 }
 .big-card .dish-description {
   background-size: cover;
@@ -28,6 +29,7 @@ h3 {
   height: 382px;
   margin: 0 auto;
 }
+
 .image-recette div {
   width: 100%;
   border-radius: 40px;
@@ -36,7 +38,7 @@ h3 {
 .speciality {
   padding-bottom: 65px;
   font-size: 22px;
-  color: red;
+  color: #d34848;
   display: flex;
   justify-content: center;
 }
@@ -57,6 +59,7 @@ h3 {
   padding: 44px;
   border-radius: 40px;
   margin-bottom: 5px;
+  line-height: 1.6;
 }
 
 @media only screen and (min-width: 769px) {
