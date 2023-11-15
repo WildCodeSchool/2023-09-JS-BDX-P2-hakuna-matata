@@ -27,7 +27,7 @@
 }
 
 .title-dish-mobile-container {
-  color: #d34848;
+  color: #323232;
 }
 
 .image-card-dish-button {
@@ -39,6 +39,7 @@
   justify-content: center;
   align-items: flex-end;
   transition: all 0.3s ease-in-out;
+  border: none;
 }
 
 .card-dish:hover {

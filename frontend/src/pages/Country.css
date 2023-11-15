@@ -62,8 +62,10 @@
   margin: 5px;
   background-color: #1b2123;
   color: white;
-  border-radius: 14px;
-  padding: 4px;
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
 }
 .flag-img {
   background-size: contain;
