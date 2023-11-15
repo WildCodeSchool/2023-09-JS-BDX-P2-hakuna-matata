@@ -35,26 +35,30 @@ function Home() {
       <Caroussel />
       <h1
         style={{
-          margin: `0 auto`,
+          fontSize: "2rem",
+          borderRadius: "10px",
+          margin: "30px",
           textAlign: "center",
           padding: `30px`,
           color: "white",
           backgroundColor: `#1b2123`,
         }}
       >
-        Taste the world
+        Taste the world !
       </h1>
       <Map />
       <h2
         style={{
-          margin: `0 auto`,
+          fontSize: "1.5rem",
+          borderRadius: "10px",
+          margin: "30px auto",
           textAlign: "center",
           padding: `30px`,
           color: "white",
           backgroundColor: `#1b2123`,
         }}
       >
-        Our weekly selection
+        Your team's favorite meals
       </h2>
       <div className="weekly">
         {weeklyDishes.map((dish) => (
