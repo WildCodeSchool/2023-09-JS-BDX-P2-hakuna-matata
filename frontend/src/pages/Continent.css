@@ -1,0 +1,5 @@
+.title-container-continent {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5em;
+}

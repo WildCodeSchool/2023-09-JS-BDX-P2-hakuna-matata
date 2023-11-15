@@ -1,5 +1,7 @@
 .banner {
   display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
   justify-content: center;
   margin: 10px auto;
   width: 70%;
@@ -28,7 +30,9 @@
   margin: 10px;
   width: 80%;
 }
+
 .table {
+  margin-top: 1em;
   margin: 0 auto;
   width: 70%;
   display: flex;
