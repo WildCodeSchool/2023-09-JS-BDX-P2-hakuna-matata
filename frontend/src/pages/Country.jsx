@@ -17,7 +17,8 @@ export default function Country() {
   }
 
   return (
-    <div>
+    <div className="container-country-page">
+      <h1>{country.strArea}</h1>
       <div className="banner">
         <div className="description">
           <h2>{country.Country}</h2>
