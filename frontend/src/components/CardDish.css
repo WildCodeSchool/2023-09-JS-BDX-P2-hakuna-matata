@@ -27,7 +27,12 @@
 }
 
 .title-dish-mobile-container {
-  color: #d34848;
+  color: #323232;
+}
+@media screen and (min-width: 700px) {
+  .title-dish-mobile-container {
+    display: none;
+  }
 }
 
 .image-card-dish-button {
@@ -39,6 +44,7 @@
   justify-content: center;
   align-items: flex-end;
   transition: all 0.3s ease-in-out;
+  border: none;
 }
 
 .card-dish:hover {
@@ -79,6 +85,7 @@
     align-items: flex-end;
     transition: all 0.3s ease-in-out;
   }
+
   .card-dish:hover {
     scale: 1.02;
   }
