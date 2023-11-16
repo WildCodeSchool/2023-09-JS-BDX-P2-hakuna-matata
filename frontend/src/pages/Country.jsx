@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CardDish from "../components/CardDish";
 import "./Country.css";
 
@@ -15,6 +15,9 @@ export default function Country() {
     );
     setDishes([...filteredDishes]);
   }
+  useEffect(() => {
+    setDishes([...countryDishes]);
+  }, [country]);
 
   return (
     <div className="container-country-page">
