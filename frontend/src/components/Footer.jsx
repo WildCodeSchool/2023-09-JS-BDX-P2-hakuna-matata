@@ -9,7 +9,7 @@ function Footer() {
         </p>
         <a href="/#top" className="footer_map">
           <img
-            src="/assets/World-Map.svg"
+            src="../assets/World-Map.svg"
             alt="Footer map"
             id="logo-bottom-center"
           />
