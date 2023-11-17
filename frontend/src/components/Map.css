@@ -1,0 +1,58 @@
+.continent:hover {
+  fill: rgb(229, 71, 71);
+  filter: drop-shadow(0 0 0.25rem rgb(129, 104, 109));
+}
+.map-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  filter: drop-shadow(0px 4px 3px #000000);
+}
+
+@media screen and (max-width: 700px) {
+  .map-svg {
+    width: 600px;
+    height: 348px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .map-svg {
+    width: 100%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 576px) {
+  .map-svg {
+    width: 100%;
+    height: auto;
+  }
+}
+.africa {
+  left: 45%;
+  top: 45%;
+}
+.america {
+  left: 7%;
+  top: 23%;
+}
+.europe {
+  top: 13%;
+  left: 48%;
+}
+.asia {
+  top: 30%;
+  right: 15%;
+  width: auto;
+}
+.hat {
+  opacity: 0;
+}
+.logo {
+  margin: 5px 0;
+  height: 100px;
+  transition: all 0.3s ease-in-out;
+}
+.logo:hover {
+  transform: scale(1.1);
+}
