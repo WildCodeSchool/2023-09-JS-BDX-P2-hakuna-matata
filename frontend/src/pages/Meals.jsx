@@ -1,6 +1,7 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
 import "./Meals.css";
+import toque from "../assets/toque.svg";
 
 export default function SingleDish() {
   const dish = useLoaderData();
@@ -23,7 +24,7 @@ export default function SingleDish() {
     <div className="big-card">
       <div className="container-meals">
         <div className="image-container">
-          <img src="../src/assets/toque.svg" alt="logo" />
+          <img src={toque} alt="logo" />
         </div>
         <div className="text-container">
           <h1>{dish.strMeal}!</h1>
