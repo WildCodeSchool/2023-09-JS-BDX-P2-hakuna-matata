@@ -19,6 +19,11 @@ import "./swiper.css";
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
+import salade from "../assets/salade.jpg";
+import sushi from "../assets/sushi.jpg";
+import tajine from "../assets/tajine.jpg";
+import hamburger from "../assets/hamburger.jpg";
+
 export default function Caroussel() {
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
@@ -26,25 +31,25 @@ export default function Caroussel() {
   const worldRegions = [
     {
       name: "Mediterranean Cuisine",
-      imgUrl: "./src/assets/salade.jpg",
+      imgUrl: salade,
       description:
         "Delicious and healthy foods from the Mediterranean region, known for olive oil, fresh vegetables, and a variety of herbs and spices.",
     },
     {
       name: "Asian Cuisine",
-      imgUrl: "./src/assets/sushi.jpg",
+      imgUrl: sushi,
       description:
         "Diverse and flavorful foods from Asia, including Chinese, Japanese, Indian, and Southeast Asian dishes, featuring a balance of flavors and unique cooking techniques.",
     },
     {
       name: "North African Cuisine",
-      imgUrl: "./src/assets/tajine.jpg",
+      imgUrl: tajine,
       description:
         "Rich and aromatic foods from North Africa, combining influences from Arabic, Berber, and Mediterranean cuisines, often featuring couscous, tagines, and a mix of spices.",
     },
     {
       name: "North American Cuisine",
-      imgUrl: "./src/assets/hamburger.jpg",
+      imgUrl: hamburger,
       description:
         "Varied and eclectic foods from North America, reflecting the cultural diversity of the continent, with influences from Native American, European, African, and Asian culinary traditions.",
     },
