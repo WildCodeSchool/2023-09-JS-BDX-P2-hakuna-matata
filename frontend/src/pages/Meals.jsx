@@ -35,6 +35,7 @@ export default function SingleDish() {
           className="dish-description"
           style={{
             backgroundImage: `url(${dish.strMealThumb})`,
+            aspectRatio: ` 5 / 4`,
           }}
         />
       </div>
